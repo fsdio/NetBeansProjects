@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="35b23cb2-dd85-45c8-a8d6-e4e0f857d261">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     tarif.`jabatan` AS tarif_jabatan,
+     tarif.`zonasi` AS tarif_zonasi,
+     tarif.`tarif` AS tarif_tarif
+     
+FROM
+     `tarif` tarif]]>
+	</queryString>
+	<field name="tarif_jabatan" class="java.lang.String"/>
+	<field name="tarif_zonasi" class="java.lang.String"/>
+	<field name="tarif_tarif" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<line>
+				<reportElement x="251" y="0" width="1" height="79" uuid="a39e7e52-98bd-462a-967e-4de77b50c9d9"/>
+			</line>
+			<staticText>
+				<reportElement x="253" y="0" width="301" height="79" uuid="d9f9ff62-601b-4c83-948e-1715e92eb335"/>
+				<text><![CDATA[Kampus Jl. Lingkar Luar Barat. Duri Kosambi, Cengkareng.
+Jakarta Barat, Provinsi DKI Jakarta, 17750, Indonesia
+Telp, +62 21 5440344 Fax +62 21 5440343
+Email: rektorat@itpln.ac.id
+Website: Https://www.itpln.ac.id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="1" width="251" height="78" uuid="45153838-ef6c-4e39-a0a7-32459d88fc19"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Institute teknologi PLN]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="-1" width="554" height="1" uuid="87e94359-75db-4104-8c00-c41fc824cd6f"/>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="32" y="2" width="100" height="20" uuid="4d4b6ffc-0677-48ab-9f3a-481f668b89c9"/>
+				<text><![CDATA[TARIF JABATAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="2" width="100" height="20" uuid="29ee16e3-c8fc-4270-8814-997bdde864ef"/>
+				<text><![CDATA[TARIF ZONASI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="362" y="2" width="100" height="20" uuid="bd667af3-4f91-4068-87b3-a110d1bc201e"/>
+				<text><![CDATA[TARIF ]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="32" y="34" width="100" height="20" uuid="b0e8002e-5c69-4f31-8b49-f9f95fe731d1"/>
+				<textFieldExpression><![CDATA[$F{tarif_jabatan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="38" width="100" height="20" uuid="6bdd50ff-b4b0-4d0b-b2ce-4e47c74cf4cb"/>
+				<textFieldExpression><![CDATA[$F{tarif_zonasi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="362" y="46" width="100" height="20" uuid="68e311d1-2c58-4569-8cfa-dff55ad86390"/>
+				<textFieldExpression><![CDATA[$F{tarif_tarif}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
